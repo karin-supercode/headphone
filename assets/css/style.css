@@ -269,6 +269,12 @@ object-fit: cover;
 .formular .wrapperBild{
   height:100%;
 }
+.formular a{
+  color:#ebccc2;
+}
+.formular a:hover{
+  border-bottom:1px solid #ebccc2;
+}
 input[type=text], input[type=email] {
   border: none;
   border-bottom: 2px solid #ebccc2;
@@ -288,9 +294,7 @@ input[type=text], input[type=email] {
 input:focus{
   outline: none;
 }
-.formular a{
-  color:#ebccc2;
-}
-.formular a:hover{
-  border-bottom:1px solid #ebccc2;
+header .highlight.active{
+  border-bottom:1px solid;
+  opacity:1;
 }
