@@ -45,11 +45,23 @@ header a{
   color:#ebccc2;
   opacity: 1;
   font-weight: 500;
+  display: flex;
+}
+header .highlight.active{
+  border-bottom:1px solid;
+  opacity:1;
 }
 aside{
   font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 500;
+}
+.button{
+  background-color: #ebccc2;
+  border-radius: 2px;
+  padding:0.7rem 1.5rem;
+  display: inline-block;
+  font-size:0.7rem;
+  color:#2e2e2e ;
+  letter-spacing:0.1rem;
 }
 /* ####################### HEADER ########################*/
 header{
@@ -72,10 +84,6 @@ header nav li{
 header nav ul{
   display: flex;
 }
-header a{
-  color:#ebccc2; 
-  display: flex;
-  }
 header .highlight{
   opacity:0.5;
   transition: all 1s ease;
@@ -88,53 +96,49 @@ header .highlight:hover{
 aside{
   position:fixed;
   top:16rem;
-  left:0;
-  margin-left:20px;
+  margin-left:1.3rem;
 }
 aside nav .navContainer{
   position: relative;
-  height:90px;
+  height:6rem;
 }
-.circle{
+.circle, .line{
   border-radius:50%;
+  position:absolute;
+  opacity:0.5;
 }
 .outerCircle{
-  position: absolute;
   top:-3px;
   left:0;
   border:1px solid white;
   width:20px;
   height:20px;
+  display:none;
 }
 .innerCircle{
-  position: absolute;
   top:1px;
   left:4px;
   border:1px solid rgb(115, 115, 115);
-  opacity:0.5;
   width:12px;
   height:12px;
 }
 .line{
-  position:absolute;
   top:18px;
   left:9px;
   width:1px;
   height:60px;
-  background-color: rgb(115, 115, 115);
-  opacity:0.5;
+  background-color: rgb(115, 115, 115, 0.5);
 }
 aside nav a{
   padding-left:50px;
-  font-weight:700;
   color:rgba(255, 255, 255, 0.55);
   opacity:0.5;  
   transition:all 1s ease;
 }
-.notActive{
-  display:none;
+.activeCircle{
+  display:block;
 }
-.active{
+.activeLink{
   color:white;
   opacity:1;
 }
@@ -153,7 +157,6 @@ a:hover{
 }
 h1{
   width:65%;
-  top:10rem;
   padding:10rem 0 10rem 24rem;
 }
 /* ######################## MAIN: HERO  - Article Alchemy #########################*/
@@ -166,22 +169,21 @@ h1{
   padding: 10rem 15rem;
 }
 .wrapperBild{
-  grid-column: 1/2;
   height:85%;
 }
-.alchemyBild, .lounger .loungerBild{
+.gridBild{
   width:100%; 
   height:100%;
   object-fit: cover;
   object-position: center;
 }
-/* #################### MAIN: The Lounger /Formular /Sounds Like Home / Shop ######################*/
-.lounger{
+/* #################### MAIN: GENERAL: GridContainer - GridBild - ArticleRight ######################*/
+.gridContainer{
   display: grid;
   grid-template-columns: 55% 45%;
   height:100vh;
 }
-.loungerBild{
+.gridBild{
   grid-column: 1/2;
 }
 .articleRight{
@@ -190,12 +192,12 @@ h1{
   place-items: center;
   width:80%;
 }
-.lounger h2{
+.gridContainer h2{
   margin-bottom:6rem;
 }
 /* #################### MAIN: Inspiration ######################*/
 main.inspiration{
-  margin:0 20rem 5rem 17rem;
+  margin:0 18rem 5rem 18rem;
 }
 main.inspiration video{
   width:90%;
@@ -203,23 +205,23 @@ main.inspiration video{
 }
 main.inspiration .inspContainer p{
   display: inline;
-  border:1px solid white; 
+  border:1px solid #dcdcdc; 
   border-radius:2px;
-  color: rgb(115, 115, 115);
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   letter-spacing:0.1rem;
   padding:0.4rem 0.5rem;
 }
 main.inspiration .insP{
     margin: 1rem 0 5rem 0;
 }
-main .containerGrid{
+main.inspiration .containerGrid{
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
 }
 .grid1{
   grid-column: 1/2;
+  line-height:0;
 }
 .grid2{
   grid-column: 2/3;
@@ -235,16 +237,8 @@ main .containerGrid{
   padding:0 3rem 0 1rem;
 }
 /* #################### MAIN: Shop ######################*/
-.lounger .textCenter{
+.gridContainer .textCenter{
   text-align: center;
-}
-.buyButton{
-  background-color: #ebccc2;
-  border-radius: 2px;
-  padding:0.8rem 1.8rem;
-  display: inline-block;
-  font-size:0.8rem;
-  color:#2e2e2e ;
 }
 .noMargin{
   padding:0;
@@ -252,6 +246,7 @@ main .containerGrid{
   width:100%;
 }
 .beoplayHeading{
+  color: #ebccc2;
   font-size:1.5rem;
 }
 .marginBottom{
@@ -261,13 +256,11 @@ main .containerGrid{
 input[type=submit] {
   margin: 1rem 0;
 }
-.formular .lounger .loungerBild{
-height:100%;
-object-position: right;
-object-fit: cover;
-}
 .formular .wrapperBild{
   height:100%;
+}
+.formular .gridContainer .gridBild{
+  object-position: left;
 }
 .formular a{
   color:#ebccc2;
@@ -276,25 +269,20 @@ object-fit: cover;
   border-bottom:1px solid #ebccc2;
 }
 input[type=text], input[type=email] {
-  border: none;
   border-bottom: 2px solid #ebccc2;
   background-color: #ebccc22c;
-  color:white;
   margin:1rem 0;
   padding:0.7rem;
   width:100%;
 }
-.buyButton:hover{
+.formular .button:hover{
   background-color: #ebccc22c;
+  color:white;
 }
-.buyButton:active{
+.formular .button:active{
   box-shadow: inset 0 0 0 4px #ebccc2;
   color: #ebccc2;
 }
-input:focus{
+.formular input:focus{
   outline: none;
-}
-header .highlight.active{
-  border-bottom:1px solid;
-  opacity:1;
 }
