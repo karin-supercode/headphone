@@ -1,0 +1,296 @@
+*{
+  border:0;
+  margin:0;
+  box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
+body{
+  font-family: 'Work Sans', sans-serif;
+  background-color: #2e2e2e;
+  color: #ebccc2;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+h1, h2, h3{
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+}
+h1{
+  font-size:2.2rem;
+}
+h2{
+  font-size:2rem;
+  margin-bottom: 1.7rem;
+}
+h3{
+  font-size:0.9rem;
+  margin-bottom: 0.6rem;
+}
+p{
+  color:rgb(115, 115, 115);
+  line-height: 1.7rem;
+  margin-bottom: 0.8rem;
+  font-weight: 300;
+  letter-spacing:0.05em;
+}
+a{
+  text-decoration: unset;
+}
+li{
+  list-style-type: none;
+}
+header a{
+  font-size: 0.7rem;
+  color:#ebccc2;
+  opacity: 1;
+  font-weight: 500;
+}
+aside{
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 500;
+}
+/* ####################### HEADER ########################*/
+header{
+  display: grid;
+  grid-template-columns: 60% 40%;
+  align-items: center;
+  position:fixed;
+  width: 95%;
+  margin: 1.5rem 3rem;
+}
+header nav{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  padding:5px 0;
+}
+header nav li{
+  padding:0 10px;
+}
+header nav ul{
+  display: flex;
+}
+header a{
+  color:#ebccc2; 
+  display: flex;
+  }
+header .highlight{
+  opacity:0.5;
+  transition: all 1s ease;
+}
+header .highlight:hover{
+  border-bottom:1px solid;
+  opacity:1;
+}
+/* ################## ASIDE NAVIGATION ###################*/
+aside{
+  position:fixed;
+  top:16rem;
+  left:0;
+  margin-left:20px;
+}
+aside nav .navContainer{
+  position: relative;
+  height:90px;
+}
+.circle{
+  border-radius:50%;
+}
+.outerCircle{
+  position: absolute;
+  top:-3px;
+  left:0;
+  border:1px solid white;
+  width:20px;
+  height:20px;
+}
+.innerCircle{
+  position: absolute;
+  top:1px;
+  left:4px;
+  border:1px solid rgb(115, 115, 115);
+  opacity:0.5;
+  width:12px;
+  height:12px;
+}
+.line{
+  position:absolute;
+  top:18px;
+  left:9px;
+  width:1px;
+  height:60px;
+  background-color: rgb(115, 115, 115);
+  opacity:0.5;
+}
+aside nav a{
+  padding-left:50px;
+  font-weight:700;
+  color:rgba(255, 255, 255, 0.55);
+  opacity:0.5;  
+  transition:all 1s ease;
+}
+.notActive{
+  display:none;
+}
+.active{
+  color:white;
+  opacity:1;
+}
+a:hover+div{
+  opacity:1;
+}
+a:hover{
+  opacity:1;
+}
+/* ######################## MAIN: HERO #########################*/
+.hero{
+  margin: 0 4.3rem;
+}
+.heroBild{
+  width:100%;
+}
+h1{
+  width:65%;
+  top:10rem;
+  padding:10rem 0 10rem 24rem;
+}
+/* ######################## MAIN: HERO  - Article Alchemy #########################*/
+.alchemy{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+  gap: 7%;
+  padding: 10rem 15rem;
+}
+.wrapperBild{
+  grid-column: 1/2;
+  height:85%;
+}
+.alchemyBild, .lounger .loungerBild{
+  width:100%; 
+  height:100%;
+  object-fit: cover;
+  object-position: center;
+}
+/* #################### MAIN: The Lounger /Formular /Sounds Like Home / Shop ######################*/
+.lounger{
+  display: grid;
+  grid-template-columns: 55% 45%;
+  height:100vh;
+}
+.loungerBild{
+  grid-column: 1/2;
+}
+.articleRight{
+  padding-left:3rem;
+  display:grid;
+  place-items: center;
+  width:80%;
+}
+.lounger h2{
+  margin-bottom:6rem;
+}
+/* #################### MAIN: Inspiration ######################*/
+main.inspiration{
+  margin:0 20rem 5rem 17rem;
+}
+main.inspiration video{
+  width:90%;
+  margin:7rem 2.5rem;
+}
+main.inspiration .inspContainer p{
+  display: inline;
+  border:1px solid white; 
+  border-radius:2px;
+  color: rgb(115, 115, 115);
+  font-size: 0.75rem;
+  letter-spacing:0.1rem;
+  padding:0.4rem 0.5rem;
+}
+main.inspiration .insP{
+    margin: 1rem 0 5rem 0;
+}
+main .containerGrid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+}
+.grid1{
+  grid-column: 1/2;
+}
+.grid2{
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.gridImg{
+  height:100%;
+  width:100%;
+  object-fit: cover;
+  object-position: center;
+}
+.inspArticle{
+  padding:0 3rem 0 1rem;
+}
+/* #################### MAIN: Shop ######################*/
+.lounger .textCenter{
+  text-align: center;
+}
+.buyButton{
+  background-color: #ebccc2;
+  border-radius: 2px;
+  padding:0.8rem 1.8rem;
+  display: inline-block;
+  font-size:0.8rem;
+  color:#2e2e2e ;
+}
+.noMargin{
+  padding:0;
+  margin:0;
+  width:100%;
+}
+.beoplayHeading{
+  font-size:1.5rem;
+}
+.marginBottom{
+  margin-bottom:1rem;
+}
+/* #################### FORMULAR ######################*/
+input[type=submit] {
+  margin: 1rem 0;
+}
+.formular .lounger .loungerBild{
+height:100%;
+object-position: right;
+object-fit: cover;
+}
+.formular .wrapperBild{
+  height:100%;
+}
+input[type=text], input[type=email] {
+  border: none;
+  border-bottom: 2px solid #ebccc2;
+  background-color: #ebccc22c;
+  color:white;
+  margin:1rem 0;
+  padding:0.7rem;
+  width:100%;
+}
+.buyButton:hover{
+  background-color: #ebccc22c;
+}
+.buyButton:active{
+  box-shadow: inset 0 0 0 4px #ebccc2;
+  color: #ebccc2;
+}
+input:focus{
+  outline: none;
+}
+.formular a{
+  color:#ebccc2;
+}
+.formular a:hover{
+  border-bottom:1px solid #ebccc2;
+}
