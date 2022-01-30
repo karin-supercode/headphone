@@ -1,9 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
 *{
   border:0;
   margin:0;
   box-sizing: border-box;
 }
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;500;600;700;800&display=swap');
 body{
   font-family: 'Work Sans', sans-serif;
   background-color: #2e2e2e;
@@ -98,12 +98,12 @@ header .highlight:hover{
 /* ################## ASIDE NAVIGATION ###################*/
 aside{
   position:fixed;
-  top:16rem;
+  top:13rem;
   margin-left:1.3rem;
 }
 aside nav .navContainer{
   position: relative;
-  height:6rem;
+  height:5rem;
 }
 .circle, .line{
   border-radius:50%;
@@ -129,7 +129,7 @@ aside nav .navContainer{
   top:18px;
   left:9px;
   width:1px;
-  height:60px;
+  height:50px;
   background-color: rgb(115, 115, 115, 0.5);
 }
 aside nav a{
@@ -160,7 +160,7 @@ a:hover{
 }
 h1{
   width:65%;
-  padding:10rem 0 10rem 24rem;
+  padding:10rem 0 10rem 20rem;
 }
 /* ######################## MAIN: HERO  - Article Alchemy #########################*/
 .alchemy{
@@ -328,7 +328,7 @@ input[type=text], input[type=email] {
     text-align: center;
   }
   header a{
-    font-size:0.9rem;
+    font-size:0.8rem;
   }
   /*  RESPONSIVE: ASIDE NAVIGATION  */
   aside{
@@ -336,11 +336,11 @@ input[type=text], input[type=email] {
     margin-left:1.3rem;
   }
   .line{
-    height:40px;
+    height:35px;
   }
   aside nav a{
     position:absolute;
-    top:-25px;
+    top:-21px;
     padding-left:0px;
   }
   .articleRight.paddingLeft{
@@ -405,7 +405,7 @@ input[type=text], input[type=email] {
     padding-right:1rem;
   }
 }
-/* E###################### ENDE 425px ########################### */
+/* E################# ENDE 425px ################# */
 
 
 @media screen and (max-width: 320px)  {
@@ -415,6 +415,9 @@ input[type=text], input[type=email] {
   header a{
     font-size:0.8rem;
   }
+  header .highlight.active {
+    border-bottom:none;
+}
   .mobileViewNav{
     display:flex;
     align-items: center;
@@ -426,5 +429,11 @@ input[type=text], input[type=email] {
     font-size:1.7rem;
     padding-top:1.2rem;
   }
-
+  input[type=text], input[type=email] {
+    border-bottom: 2px solid #ebccc2;
+    background-color: #ebccc22c;
+    margin:0.5rem 0;
+    padding:0.7rem;
+    width:100%;
+  }
 }
