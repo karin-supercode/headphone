@@ -318,8 +318,7 @@ input[type=text], input[type=email] {
   h2{
     font-size:1.5rem;
   }
-
-   /*  RESPONSIVE: HEADER  */
+  /*  RESPONSIVE: HEADER  */
   header{
     background-color: #2e2e2e;
     grid-template-columns: 15% 85%;
@@ -331,8 +330,7 @@ input[type=text], input[type=email] {
   header a{
     font-size:0.9rem;
   }
-
-   /*  RESPONSIVE: ASIDE NAVIGATION  */
+  /*  RESPONSIVE: ASIDE NAVIGATION  */
   aside{
     top:18rem;
     margin-left:1.3rem;
@@ -348,7 +346,6 @@ input[type=text], input[type=email] {
   .articleRight.paddingLeft{
     padding-left:1rem;
   }
-
   /* # RESPONSIVE: MAIN: HERO */
   .hero, .inspiration{
     margin: 0 1.3rem;
@@ -358,16 +355,14 @@ input[type=text], input[type=email] {
     font-size: 2rem;
     padding:5rem 0 1rem 0rem;
   }
-
-/* RESPONSIVE: MAIN: HERO  - Article Alchemy */
+  /* RESPONSIVE: MAIN: HERO  - Article Alchemy */
   .alchemy{
     grid-template-columns: 1fr;
     align-items: top;
     gap: 2%;
     padding: 1rem 1rem 0 8rem;
   }
-
-/* RESPONSIVE: INSPIRATION - Article Video */
+  /* RESPONSIVE: INSPIRATION - Article Video */
   main.inspiration{
     margin:0;
   }
@@ -404,6 +399,10 @@ input[type=text], input[type=email] {
   }
   .articleRight{
     width:100%;
+  }
+  /* RESPONSIVE: Subscribe  */
+  .formular .articleRight{
+    padding-right:1rem;
   }
 }
 /* E###################### ENDE 425px ########################### */
